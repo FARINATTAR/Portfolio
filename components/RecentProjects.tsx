@@ -1,7 +1,6 @@
 "use client";
 
 import { FaLocationArrow } from "react-icons/fa6";
-
 import { projects } from "@/data";
 import { PinContainer } from "./ui/Pin";
 
@@ -19,25 +18,32 @@ const RecentProjects = () => {
             key={item.id}
           >
             <PinContainer
-              title="/ui.aceternity.com"
-              href="https://twitter.com/mannupaaji"
+              title="Project link"
+              // Link to the specific GitHub project
+              href={item.link || "https://github.com/FARINATTAR"} // Assuming `item.link` contains the project GitHub URL
             >
-              <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
-                <div
-                  className="relative w-full h-full overflow-hidden lg:rounded-3xl"
-                  style={{ backgroundColor: "#13162D" }}
-                >
-                  <img src="/bg.png" alt="bgimg" />
-                </div>
-                <img
-                  src={item.img}
-                  alt="cover"
-                  className="z-10 absolute bottom-0"
-                />
-              </div>
+<div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[40vh] lg:h-[42vh] mb-10">
+  <div
+    className="relative w-full h-full overflow-hidden lg:rounded-3xl"
+    style={{ backgroundColor: "#13162D" }}
+  >
+    <img src="/bg.png" alt="bgimg" />
+  </div>
+  <img
+    src={item.img}
+    alt="cover"
+    className="z-10 absolute bottom-0 w-full h-full object-cover" // Adjust size and object fit
+  />
+</div>
+
+
+
 
               <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
-                {item.title}
+                {/* Wrap the title with a link to GitHub */}
+                <a href={item.link || "https://github.com/FARINATTAR"} target="_blank" rel="noopener noreferrer">
+                  {item.title}
+                </a>
               </h1>
 
               <p
@@ -52,24 +58,14 @@ const RecentProjects = () => {
 
               <div className="flex items-center justify-between mt-7 mb-3">
                 <div className="flex items-center">
-                  {item.iconLists.map((icon, index) => (
-                    <div
-                      key={index}
-                      className="border border-white/[.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
-                      style={{
-                        transform: `translateX(-${5 * index + 2}px)`,
-                      }}
-                    >
-                      <img src={icon} alt="icon5" className="p-2" />
-                    </div>
-                  ))}
+                  {/* {item.iconLists.map((icon, index) => ( ... ))} */}
                 </div>
 
                 <div className="flex justify-center items-center">
-                  <p className="flex lg:text-xl md:text-xs text-sm text-purple">
+                  {/* <p className="flex lg:text-xl md:text-xs text-sm text-purple">
                     Check Live Site
-                  </p>
-                  <FaLocationArrow className="ms-3" color="#CBACF9" />
+                  </p> */}
+                  {/* <FaLocationArrow className="ms-3" color="#CBACF9" /> */}
                 </div>
               </div>
             </PinContainer>

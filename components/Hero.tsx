@@ -1,10 +1,18 @@
+import { useEffect } from 'react';
 import { FaLocationArrow } from "react-icons/fa6";
-
 import MagicButton from "./MagicButton";
 import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 
 const Hero = () => {
+  useEffect(() => {
+    // Dynamically adding Google Fonts link for "Ga Maamli"
+    const link = document.createElement('link');
+    link.href = "https://fonts.googleapis.com/css2?family=Ga+Maamli:wght@400&display=swap";
+    link.rel = "stylesheet";
+    document.head.appendChild(link);
+  }, []);
+
   return (
     <div className="pb-20 pt-36">
       {/**
@@ -34,7 +42,7 @@ const Hero = () => {
       >
         {/* Radial gradient for the container to give a faded look */}
         <div
-          // chnage the bg to bg-black-100, so it matches the bg color and will blend in
+          // change the bg to bg-black-100, so it matches the bg color and will blend in
           className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black-100
          bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"
         />
@@ -43,7 +51,7 @@ const Hero = () => {
       <div className="flex justify-center relative my-20 z-10">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
           <p className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80">
-            Dynamic Web Magic with Next.js
+            
           </p>
 
           {/**
@@ -51,13 +59,16 @@ const Hero = () => {
            *
            *  change md:text-6xl, add more responsive code
            */}
-          <TextGenerateEffect
+          {/* <TextGenerateEffect
             words="Transforming Concepts into Seamless User Experiences"
             className="text-center text-[40px] md:text-5xl lg:text-6xl"
-          />
+          /> */}
 
-          <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-            Hi! I&apos;m Adrian, a Next.js Developer based in Croatia.
+          <p 
+            className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl" 
+            style={{ fontFamily: "'Ga Maamli', sans-serif", fontSize: "clamp(2rem, 5vw, 2.4rem)" }}
+          >
+            Hi! I&apos;m Farin, a Web Developer based in India.
           </p>
 
           <a href="#about">
