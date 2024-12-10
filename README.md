@@ -1,17 +1,23 @@
-Portfolio
-This is a personal portfolio website created using a template from Adrian Hajdin.
+# Portfolio
+
+This is a personal portfolio website created using a template from [Adrian Hajdin](https://github.com/adrianhajdin). 
 
 I have customized the content to reflect my personal skills, projects, and experience.
 
-⚙️ Tech Stack
-Next.js
-Three.js
-Framer Motion
-Tailwind CSS
+## ⚙️ Tech Stack
+- Next.js
+- Three.js
+- Framer Motion
+- Tailwind CSS
 
-Installation Instructions
+## Installation Instructions
 To clone this project, follow these steps:
 
-Clone the repository: git clone https://github.com/FARINATTAR/Portfolio.git
-Install dependencies: npm install
-Run the app locally: npm start
+1. Clone the repository:  
+   `git clone https://github.com/FARINATTAR/Portfolio.git`
+   
+2. Install dependencies:  
+   `npm install`
+   
+3. Run the app locally:  
+   `npm start`
