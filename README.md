@@ -20,4 +20,4 @@ To clone this project, follow these steps:
    `npm install`
    
 3. Run the app locally:  
-   `npm start`
+   `npm run dev`
