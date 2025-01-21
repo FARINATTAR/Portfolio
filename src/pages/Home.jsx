@@ -1,8 +1,6 @@
-
 import { motion } from "framer-motion";
 import { TypeAnimation } from 'react-type-animation';
 import EarthCanvas from "../components/canvas/Earth";
-import SpaceBackground from '../components/canvas/Space';
 
 const HeroSection = () => {
   return (

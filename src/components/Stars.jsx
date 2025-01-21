@@ -1,36 +1,4 @@
-// import React, { useEffect, useRef } from "react";
-
-// import '../assets/styles/Stars.css';
-
-// const ShootingStars = () => {
-//   const starContainerRef = useRef(null);
-
-//   useEffect(() => {
-//     const createShootingStar = () => {
-//       const star = document.createElement("div");
-//       star.classList.add("shooting-star");
-//       star.style.left = Math.random() * window.innerWidth + "px";
-//       star.style.animationDuration = 1 + Math.random() * 2 + "s";
-//       starContainerRef.current.appendChild(star);
-
-//       // Remove the star after its animation
-//       setTimeout(() => {
-//         star.remove();
-//       }, 3000);
-//     };
-
-//     // Create a star every 500ms
-//     const interval = setInterval(createShootingStar, 500);
-
-//     return () => clearInterval(interval); // Cleanup on unmount
-//   }, []);
-
-//   return <div ref={starContainerRef} className="shooting-stars"></div>;
-// };
-
-// export default ShootingStars;
 import React, { useEffect, useRef } from "react";
-// import "./ShootingStars.css";
 import '../assets/styles/Stars.css';
 
 const ShootingStars = () => {
