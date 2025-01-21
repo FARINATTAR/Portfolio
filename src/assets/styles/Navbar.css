@@ -1,0 +1,32 @@
+/* Center Navbar Text */
+.custom-navbar .navbar-nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 2rem;
+    background-color: #020617;
+  }
+  
+  /* Custom Navbar Links */
+  .custom-nav-link {
+    color: white !important; /* Default text color */
+    text-align: center; /* Center-align text */
+    font-size: 20px !important; /* Increased font size */
+    transition: color 0.3s ease; /* Smooth hover effect */
+  }
+  
+  .custom-nav-link:hover {
+    color: #ff6b00 !important; /* Orange color on hover */
+  }
+  
+  .custom-nav-link.disabled {
+    color: blue; /* Disabled text color */
+    cursor: not-allowed; /* Disabled cursor style */
+  }
+  
+  /* Navbar Background */
+  .custom-navbar {
+    
+    padding: 1rem 2rem;
+  }
+  
